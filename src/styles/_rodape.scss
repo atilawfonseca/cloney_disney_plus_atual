@@ -1,0 +1,27 @@
+.rodape {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+    gap: 1em;
+    max-width: 1000px;
+
+    &__img {
+        max-width: 80px;
+        margin-bottom: 1em;
+    }
+    &__list {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1em;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 2em;
+    }
+    p {
+        text-align: center;
+        margin-bottom: 2em;
+    }
+}

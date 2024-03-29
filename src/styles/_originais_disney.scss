@@ -1,0 +1,42 @@
+.originais__disney {
+    margin-top: 3em;
+    margin-bottom: 1.5em;
+    &__title {
+        text-align: center;
+        margin-bottom: 1em;
+    }
+    &__paragrafo {
+        text-align: center;
+        margin-bottom: 2em;
+    }
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        justify-content: center;
+
+        &__item{
+            width: 47%;
+            
+
+            img {
+                width: 100%;
+                border-radius: 4px;
+            }
+        }
+        @media screen and (min-width:767px) {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+
+            &__item{
+                width: 100%;
+                
+    
+                img {
+                    width: 100%;
+                    border-radius: 4px;
+                }
+            }
+        }
+    }
+}

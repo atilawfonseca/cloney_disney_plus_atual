@@ -1,0 +1,55 @@
+@use 'variaveis';
+
+.perguntas {
+    &__title {
+        text-align: center;
+        margin-bottom: .5em;
+    }
+    &__lista {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+
+        &__item {
+            background-color: variaveis.$bg_dark_variant;
+            width: 100%;
+            min-height: 60px;
+            :hover {
+                cursor: pointer;
+            }
+            :active {
+                background-color: variaveis.$bg_btn_header;
+            }
+            &__title {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 8px 16px;
+                &::after {
+                    content: '-';
+                    font-size: 3em;
+                    display: block;
+                    
+                }
+                
+            }
+            ul {
+                li {
+                    list-style: inside;
+                    padding: 4px 8px;
+                    margin-top: .75em;
+                }
+            }
+        }
+    }
+}
+
+.--colapsar {
+    overflow-y: scroll;
+    height: 0px;
+}
+
+.perguntas__lista__item__title.--alterar_icone::after {
+    content: '+';
+    font-size: 2.5em;
+}

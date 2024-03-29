@@ -1,0 +1,84 @@
+@use 'container';
+@use 'variaveis';
+@use 'header';
+@use 'hero';
+@use 'planos';
+@use 'assista';
+@use 'originais_disney';
+@use 'perguntas';
+@use 'rodape';
+
+@font-face {
+    font-family: Avenir;
+    src: url(../../assets/fonts/Avenir-Regular.woff2);
+    font-weight: 400;
+}
+@font-face {
+    font-family: Avenir;
+    src: url(../../assets/fonts/Avenir-Bold.woff2);
+    font-weight: 700;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Avenir;
+}
+
+body {
+    background-color: variaveis.$bg_color;
+}
+h2 {
+    color: variaveis.$titles_color;
+}
+
+@mixin title ($font_size:32px) {
+    font-size: $font_size;
+    letter-spacing: -.16px;
+    color: variaveis.$titles_color;
+}
+
+@mixin text ($font_size:16px) {
+    font-size: $font_size;
+    color: variaveis.$color_text;
+}
+
+.text {
+    @include text;
+}
+.text--small {
+    @include text(12px);
+}
+
+.title {
+    @include title;
+    font-weight: 700;
+    line-height: 32px;
+}
+.title--small {
+    @include title(16px);
+}
+
+.-is--btn {
+    color: transparent;
+    border-radius: 4px;
+    color: variaveis.$titles_color;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.--is-hidden {
+    visibility: hidden;
+}
+
+section {
+    margin-bottom: 2em;
+}
+button {
+    background-color: variaveis.$bg_btn_plano_dis;
+    padding: 16px 20px;
+    font-size: 14px;
+    border: 1px solid variaveis.$bg_btn_plano_dis;
+}
