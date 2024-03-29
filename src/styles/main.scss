@@ -67,6 +67,9 @@ h2 {
     text-decoration: none;
     text-transform: uppercase;
     text-align: center;
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 .--is-hidden {
